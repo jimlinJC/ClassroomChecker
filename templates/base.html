@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Classroom</title>
+    <!-- <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' media='all' /> -->
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' media='all' />
+    <link href="{% static 'css/theme-nearblack.css' %}" rel='stylesheet' type='text/css' media='all' />
+    <link href="{% static 'images/backgroundblack.jpg' %}" rel='image_src' media='all' />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="nav-container" style="min-height: 55px; ">
+            <a id="top"></a>
+            <nav class="">
+                <div class="nav-bar">
+                    <div class='module-group left'>
+                        <div class='module left'>
+                            <ul class='menu'>
+                                <li class='active'>
+                                    <a href="{% url 'home' %}" class='bold' style='font-size: 14px;'>
+                                        <span class='menu-text'>Home</span>
+                                    </a>
+                                </li>
+                                <li class="bold">
+                                    <a href="{% url 'about' %}" target="_blank" class="bold" style="font-size: 14px;">
+                                        <span class="menu-text">About</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+<footer class='footer-1 bg-dark' style="background-color: #292929; max-height: 10px;">
+        <div class="container">        
+            <div class="row" >
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 center">
+                    <ul class="list-inline social-list">
+                      <li>Website by <a target="_blank" style="font-weight:lighter" href="https://www.instagram.com/linjincheng4117"> Jim</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</footer>
+</html>

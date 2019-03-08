@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<section class="cover image-bg" style="height: 100%;">
+    <div class="background-image-holder fadeIn"
+        style="background: url(&quot;static/images/backgroundblack.jpg&quot;); background-attachment:fixed;">
+        <img alt="background" class="background-image" src="{% static 'images/backgroundblack.jpg' %}" style="display: none;" />
+    </div>
+    <div class="col-sm-offset-4" style="overflow: auto;">
+        <h1 class='bold large mb8'>
+            {% for key, values in noneUsedClassroomNow.items %}
+            第{{ key }}節 
+            {% for value in values %}
+            <li>{{ value }}</li>
+            {% endfor %}
+            {% endfor %}
+        </h1>
+        <h1 class='bold large mb8 text-primary'>
+            {% for key, values in noneUsedClassroomNext.items %}
+            第{{ key }}節 
+            {% for value in values %}
+            <li>{{ value }}</li>
+            {% endfor %}
+            {% endfor %}
+        </h1>
+    </div>
+</section>
+
+{% endblock %}
